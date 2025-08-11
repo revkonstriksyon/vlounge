@@ -1,0 +1,70 @@
+ devlope yon entèfas admin (CMS) konplè pou sitwèb V Lounge la.
+
+Objektif: Entèfas admin sa a pral pèmèt mwen (ak ekip V Lounge la) mete ajou, ajoute, modifye, oswa retire nenpòt kontni sou sitwèb la san nou pa bezwen kòd.
+
+1. Fonksyonalite Jeneral:
+
+Koneksyon Sekirize: Entèfas la dwe gen yon paj koneksyon ki an sekirite (login page) ak non itilizatè ak modpas.
+
+Dashboard: Lè m konekte, m ap genyen yon tablodbò (dashboard) ki klè ak senp pou m wè tout seksyon sitwèb la.
+
+Multilang: Tout kontni an dwe jere nan twa lang yo (Kreyòl, Angle, Fransè). Lè m ap ajoute yon nouvo atik (meni, evènman, elatriye), m ap gen posiblite pou m antre tèks pou tout twa lang yo.
+
+2. Jesyon Kontni (Seksyon pa Seksyon):
+
+Paj Akey (Home Page):
+
+Sliding Video/Imaj: Mwen dwe ka telechaje, modifye, epi retire imaj ak videyo pou "slider" la.
+
+Tèks Slider: Mwen dwe ka edite tit ak eslogan ki sou chak imaj nan "slider" la.
+
+Bouton Slider: Mwen dwe ka chanje tèks bouton yo ak lyen yo mennen yo.
+
+Paj Meni (Menu Page):
+
+Kategori: Mwen dwe ka ajoute, modifye, oswa retire kategori manje (egzanp: Appetizers, Main Courses, Drinks).
+
+Atik Meni: Nan chak kategori, mwen dwe ka:
+
+Ajoute yon nouvo atik (non, deskripsyon, pri, foto).
+
+Modifiye enfòmasyon yon atik ki deja la.
+
+Retire yon atik.
+
+Paj Evènman (Events Page):
+
+Evènman: Mwen dwe ka ajoute yon nouvo evènman ak tout detay:
+
+Non evènman, deskripsyon.
+
+Dat, lè.
+
+Pri tikè (plizyè opsyon pri tankou "EARLY BIRD").
+
+Lyen dirèk pou achte tikè (sou PamEvent).
+
+Imaj evènman an.
+
+Evènman Pase: Mwen ta renmen pou evènman ki pase yo disparèt otomatikman oswa pou m ka achive yo.
+
+Paj Galeri (Gallery Page):
+
+Imaj ak Videyo: Mwen dwe ka telechaje, modifye, epi retire imaj ak videyo nan galeri a.
+
+Kategori Galeri: Mwen dwe ka kreye, modifye, oswa retire kategori nan galeri a (egzanp: Interior, Cuisine, Events). Lè m telechaje yon foto, m ap gen posiblite pou m klase l nan yon kategori.
+
+Paj Kontak (Contact Page):
+
+Enfòmasyon Kontak: Mwen dwe ka mete ajou:
+
+Adrès, nimewo telefòn, adrès imèl.
+
+Lè ouvèti ak fèmen.
+
+Lyen Rezo Sosyal: Mwen dwe ka mete ajou lyen ki mennen nan Instagram ak TikTok.
+
+Konklizyon:
+Entèfas admin sa a esansyèl pou pwojè a. Li dwe senp pou itilizatè a, men pwisan nan fonksyonalite li. Nou ka itilize yon CMS san tèt (headless CMS) tankou Strapi oswa Contentful, oswa nou ka devlope yon solisyon koutim ki adapte pou bezwen nou yo.
+
+Mèsi pou kolaborasyon nou. N ap tann pwopozisyon nou sou teknoloji ak delè pou pwojè sa a.
