@@ -1,0 +1,35 @@
+Mwen voye nou yon folder ki genyen pi bon vizyèl V Lounge yo. Pou rann sitwèb la vrèman inoubliyab, mwen vle pou chak moun ki vizite l santi yon efè "wow". Sa vle di, konsepsyon an dwe pwofesyonèl, modèn, ak minimalis, avèk yon touche animasyon ki subtil ak elegant.
+
+1. Paj Akey (Home Page): Kreye yon eksperyans 'Wow'
+
+Slider ak AnimasYon: Nou pral itilize yon "slider" sou paj akey la. Mwen vle nou chwazi 3 videyo oswa foto ki pi bèl yo, ak pi gwo kalite ki genyen nan folder nan.
+
+Efè "Parallax": Lè moun ap desann paj la, imaj background lan ka deplase yon ti kras pi dousman pase tèks yo, sa ki kreye yon bèl efè.
+
+Tèks ak Bouton Animatè: Lè imaj yo parèt, tèks yo ak bouton yo dwe parèt avèk yon ti animasyon sibtil (fade-in, slide-up). Pa gen animasyon ki brital.
+
+Diapozitiv 1 (Evènman): Chwazi yon videyo ki montre yon anbyans fèt, ak moun ki ap danse. Mete yon tit ki fò ak yon bouton ki gen yon efè "hover" élégant ki mennen dirèkteman nan paj Evènman an.
+
+Diapozitiv 2 (Galeri): Chwazi yon foto ki montre bèl vizyon an sou lavil la pandan solèy k ap kouche. Tit la dwe envite moun dekouvri kote a ak yon bouton ki mennen nan paj Galeri a.
+
+Diapozitiv 3 (Meni): Chwazi yon imaj gwo fòma ki montre yon plat oswa yon bwason ki sanble trè "chic". Mete yon tit ki bay anvi, ak yon bouton ki mennen nan paj Meni an.
+
+2. Seksyon Blòk (Meni, Evènman, Galeri) sou Paj Akey:
+
+Entèaktivite: Chak blòk sa yo dwe gen yon bèl imaj ki reprezante l. Lè yon moun pase sourit li sou blòk la, blòk la dwe gen yon ti efè (li ka yon ti kras grandi, oswa yon bèl ti limyè ka parèt) ki di "klike sou mwen".
+
+Imaj: Chwazi foto ki pi bon yo nan folder nan pou chak blòk (yon plat pou Meni, yon anbyans fèt pou Evènman, ak yon bèl vizyon pou Galeri).
+
+3. Paj Galeri a:
+
+Tranzisyon Animatè: Lè moun ap navige nan galeri a, animasyon dwe genyen. Lè yo klike sou yon foto, li ka gen yon bèl efè lè l ouvri (pop-up).
+
+Filtè: Sèvi ak kategori yo ("Interior," "Rooftop Views," "Cuisine," "Events") pou moun ka filtre foto yo, sa ki ap rann galeri a plis òganize.
+
+4. Kalite Foto ak Videyo:
+
+Segondè Rezolisyon: Tout foto ak videyo yo dwe gen gwo rezolisyon (HD) e yo dwe pwòp.
+
+Optimizasyon: Menm si yo gwo, yo dwe optimize pou sit la chaje vit. Pa gen anyen ki pi mal pase yon sit ki chaje dousman.
+
+Mwen fè nou konfyans pou nou transfòme sit la ak vizyèl sa yo pou l ka gen yon vrè efè "wow". Mèsi pou konpreyansyon nou.
