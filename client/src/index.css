@@ -334,12 +334,17 @@ body {
 footer {
   position: relative;
   z-index: 50;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 /* Ensure footer is always visible */
 main {
   flex: 1;
+}
+
+/* Remove excessive animations for stability */
+.animate-pulse {
+  animation: none;
 }
 
 /* Animation Classes */
