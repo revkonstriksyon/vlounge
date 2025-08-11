@@ -1,6 +1,8 @@
 import { Link } from 'wouter';
 import { ArrowRight, MapPin, Clock, Users, Star, Award, Heart, Calendar, Music, ExternalLink } from 'lucide-react';
 import { useLanguage, eventData } from '../contexts/LanguageContext';
+import HeroSlider from '../components/HeroSlider';
+import InteractiveBlocks from '../components/InteractiveBlocks';
 import eventImage from '@assets/vlounge_rooftop_1754936167492_1754942008137.jpeg';
 
 const Home: React.FC = () => {
@@ -13,87 +15,11 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-mesh">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg"
-            alt="V Lounge Rooftop View"
-            className="w-full h-full object-cover scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90" />
-          <div className="absolute inset-0 bg-gradient-radial" />
-        </div>
+      {/* Enhanced Hero Slider */}
+      <HeroSlider />
 
-        {/* Content */}
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
-          <div className="mb-12 animate-fade-in">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 100 100"
-              className="mx-auto mb-8 animate-float filter drop-shadow-2xl"
-            >
-              <path
-                d="M20 20 L80 20 L50 60 L50 85 M35 85 L65 85"
-                stroke="white"
-                strokeWidth="1.5"
-                fill="none"
-                className="drop-shadow-lg"
-              />
-              <defs>
-                <linearGradient id="vGradientHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#D4AF37', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#FF6B35', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-              <polygon
-                points="25,25 75,25 50,55"
-                fill="url(#vGradientHero)"
-                className="animate-glow"
-              />
-            </svg>
-          </div>
-
-          <h1 className="font-display text-5xl md:text-8xl font-bold mb-8 text-gradient animate-fade-in-up text-shadow text-balance leading-tight">
-            {t('home.hero.title')}
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-secondary mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200 font-light tracking-wide text-balance">
-            {t('home.hero.subtitle')}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
-            <Link
-              to="/contact"
-              className="btn-primary hover-lift text-lg px-10 py-5 group"
-            >
-              <span className="flex items-center justify-center space-x-3">
-                <span>{t('home.hero.reserve')}</span>
-                <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Link>
-            
-            <Link
-              to="/events"
-              className="btn-secondary hover-lift text-lg px-10 py-5 group"
-            >
-              <span className="flex items-center justify-center space-x-3">
-                <span>{t('home.hero.tickets')}</span>
-                <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Link>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce delay-1000">
-          <div className="w-8 h-12 border-2 border-white/60 rounded-full flex justify-center backdrop-blur-sm">
-            <div className="w-1.5 h-4 bg-gradient-to-b from-primary-gold to-primary-orange rounded-full mt-3 animate-pulse" />
-          </div>
-        </div>
-      </section>
+      {/* Interactive Blocks Section */}
+      <InteractiveBlocks />
 
       {/* About Section */}
       <section className="py-32 bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-primary relative overflow-hidden">

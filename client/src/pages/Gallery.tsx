@@ -1,101 +1,70 @@
 import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { X, Filter, Camera } from 'lucide-react';
+import ParallaxSection from '../components/ParallaxSection';
+
+// Import our V Lounge images
+import image1 from '@assets/vlounge_rooftop_1754936167492_1754942008137.jpeg';
+import image2 from '@assets/vlounge_rooftop_1754936429390_1754948240028.jpeg';
+import image3 from '@assets/vlounge_rooftop_1754936435556_1754948240029.jpeg';
+import image4 from '@assets/vlounge_rooftop_1754936441929_1754948240030.jpeg';
+import image5 from '@assets/vlounge_rooftop_1754936449739_1754948240031.jpeg';
+import image6 from '@assets/vlounge_rooftop_1754936453817_1754948240035.jpeg';
+import image7 from '@assets/vlounge_rooftop_1754936457936_1754948240038.jpeg';
+import image8 from '@assets/vlounge_rooftop_1754936476091_1754948240039.jpeg';
+import image9 from '@assets/vlounge_rooftop_1754936479997_1754948240040.jpeg';
+import image10 from '@assets/vlounge_rooftop_1754936491487_1754948240041.jpeg';
+import image11 from '@assets/vlounge_rooftop_1754936503366_1754948240042.jpeg';
+import image12 from '@assets/vlounge_rooftop_1754936521995_1754948240043.jpeg';
+import image13 from '@assets/vlounge_rooftop_1754936413185_1754948240045.jpeg';
+import image14 from '@assets/vlounge_rooftop_1754936302542 (1)_1754948240046.jpeg';
+import image15 from '@assets/vlounge_rooftop_1754936205223_1754948240046.jpeg';
+
+type GalleryCategory = 'all' | 'interior' | 'rooftop' | 'cuisine' | 'events';
+
+interface GalleryImage {
+  src: string;
+  category: GalleryCategory;
+  title: string;
+}
 
 const Gallery: React.FC = () => {
   const { t } = useLanguage();
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState<GalleryCategory>('all');
 
-  const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'interior', name: 'Interior' },
-    { id: 'rooftop', name: 'Rooftop Views' },
-    { id: 'food', name: 'Cuisine' },
-    { id: 'events', name: 'Events' },
+  const galleryImages: GalleryImage[] = [
+    { src: image1, category: 'rooftop', title: 'Rooftop Evening View' },
+    { src: image2, category: 'rooftop', title: 'City Panorama' },
+    { src: image3, category: 'interior', title: 'Elegant Interior' },
+    { src: image4, category: 'cuisine', title: 'Gourmet Dishes' },
+    { src: image5, category: 'events', title: 'Event Atmosphere' },
+    { src: image6, category: 'cuisine', title: 'Signature Cocktails' },
+    { src: image7, category: 'rooftop', title: 'Sunset Views' },
+    { src: image8, category: 'interior', title: 'Lounge Area' },
+    { src: image9, category: 'events', title: 'Live Entertainment' },
+    { src: image10, category: 'rooftop', title: 'Night Ambiance' },
+    { src: image11, category: 'cuisine', title: 'Chef\'s Special' },
+    { src: image12, category: 'interior', title: 'Premium Seating' },
+    { src: image13, category: 'events', title: 'Party Night' },
+    { src: image14, category: 'rooftop', title: 'Skyline Views' },
+    { src: image15, category: 'interior', title: 'Sophisticated Dining' }
   ];
 
-  const galleryItems = [
-    {
-      id: 1,
-      src: 'https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg',
-      alt: 'Rooftop dining area with city views',
-      category: 'rooftop',
-    },
-    {
-      id: 2,
-      src: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg',
-      alt: 'Elegant interior lounge seating',
-      category: 'interior',
-    },
-    {
-      id: 3,
-      src: 'https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg',
-      alt: 'Signature cocktails and appetizers',
-      category: 'food',
-    },
-    {
-      id: 4,
-      src: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
-      alt: 'Live jazz performance',
-      category: 'events',
-    },
-    {
-      id: 5,
-      src: 'https://images.pexels.com/photos/566344/pexels-photo-566344.jpeg',
-      alt: 'Grilled shrimp presentation',
-      category: 'food',
-    },
-    {
-      id: 6,
-      src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
-      alt: 'Modern bar area',
-      category: 'interior',
-    },
-    {
-      id: 7,
-      src: 'https://images.pexels.com/photos/725997/pexels-photo-725997.jpeg',
-      alt: 'Rooftop terrace at sunset',
-      category: 'rooftop',
-    },
-    {
-      id: 8,
-      src: 'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg',
-      alt: 'Premium wagyu beef dish',
-      category: 'food',
-    },
-    {
-      id: 9,
-      src: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg',
-      alt: 'Salsa dancing event',
-      category: 'events',
-    },
-    {
-      id: 10,
-      src: 'https://images.pexels.com/photos/1283566/pexels-photo-1283566.jpeg',
-      alt: 'Signature martini collection',
-      category: 'food',
-    },
-    {
-      id: 11,
-      src: 'https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg',
-      alt: 'Wine tasting setup',
-      category: 'events',
-    },
-    {
-      id: 12,
-      src: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
-      alt: 'New Year celebration',
-      category: 'events',
-    },
+  const categories: { key: GalleryCategory; label: string }[] = [
+    { key: 'all', label: t('gallery.filter.all') },
+    { key: 'interior', label: t('gallery.filter.interior') },
+    { key: 'rooftop', label: t('gallery.filter.rooftop') },
+    { key: 'cuisine', label: t('gallery.filter.cuisine') },
+    { key: 'events', label: t('gallery.filter.events') }
   ];
 
-  const filteredImages = activeCategory === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredImages = activeFilter === 'all' 
+    ? galleryImages 
+    : galleryImages.filter(img => img.category === activeFilter);
 
-  const openLightbox = (index: number) => {
-    setSelectedImage(index);
+  const openLightbox = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
     document.body.style.overflow = 'hidden';
   };
 
@@ -104,108 +73,115 @@ const Gallery: React.FC = () => {
     document.body.style.overflow = 'unset';
   };
 
-  const navigateImage = (direction: 'prev' | 'next') => {
-    if (selectedImage === null) return;
-    
-    const newIndex = direction === 'next' 
-      ? (selectedImage + 1) % filteredImages.length
-      : (selectedImage - 1 + filteredImages.length) % filteredImages.length;
-    
-    setSelectedImage(newIndex);
-  };
-
   return (
-    <div className="min-h-screen bg-black py-20">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-            {t('gallery.title')}
-          </h1>
-          <p className="text-gray-400 text-lg">
-            Discover the elegance and sophistication of V Lounge & Rooftop
-          </p>
-        </div>
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-gold/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-orange/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black'
-                  : 'border border-gray-600 text-white hover:border-yellow-400 hover:text-yellow-400'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+      <div className="relative z-10 py-20">
+        {/* Header Section with Parallax */}
+        <ParallaxSection speed={0.3}>
+          <section className="py-20 text-center">
+            <div className="container mx-auto px-4">
+              <div className="inline-flex items-center space-x-2 mb-6">
+                <Camera size={24} className="text-primary-gold animate-pulse" />
+                <span className="text-primary-gold font-semibold uppercase tracking-widest text-sm">
+                  Visual Experience
+                </span>
+                <Camera size={24} className="text-primary-gold animate-pulse" />
+              </div>
+              
+              <h1 className="font-display text-5xl md:text-7xl font-bold text-gradient mb-6 animate-fade-in-up">
+                {t('gallery.title')}
+              </h1>
+              
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                {t('gallery.subtitle')}
+              </p>
+            </div>
+          </section>
+        </ParallaxSection>
+
+        {/* Filter Section */}
+        <section className="py-10">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category.key}
+                  onClick={() => setActiveFilter(category.key)}
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 ${
+                    activeFilter === category.key
+                      ? 'bg-gradient-to-r from-primary-gold to-primary-orange text-black shadow-lg'
+                      : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+                  }`}
+                >
+                  <span className="flex items-center space-x-2">
+                    <Filter size={16} />
+                    <span>{category.label}</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredImages.map((item, index) => (
-            <div
-              key={item.id}
-              className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer"
-              onClick={() => openLightbox(index)}
-            >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {item.alt}
-                </p>
-              </div>
+        <section className="py-10">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => openLightbox(image.src)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Title */}
+                  <div className="absolute bottom-4 left-4 right-4 transform translateY-4 group-hover:translateY-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 className="text-white font-semibold text-lg leading-tight">
+                      {image.title}
+                    </h3>
+                  </div>
+
+                  {/* Hover Effect Ring */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-primary-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         {/* Lightbox */}
-        {selectedImage !== null && (
-          <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
-            <button
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors duration-200 z-10"
-            >
-              <X size={32} />
-            </button>
-            
-            <button
-              onClick={() => navigateImage('prev')}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-yellow-400 transition-colors duration-200 z-10"
-            >
-              <ChevronLeft size={48} />
-            </button>
-            
-            <button
-              onClick={() => navigateImage('next')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-yellow-400 transition-colors duration-200 z-10"
-            >
-              <ChevronRight size={48} />
-            </button>
-
-            <div className="max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center">
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4"
+            onClick={closeLightbox}
+          >
+            <div className="relative max-w-7xl max-h-full">
               <img
-                src={filteredImages[selectedImage].src}
-                alt={filteredImages[selectedImage].alt}
-                className="max-w-full max-h-full object-contain rounded-lg"
+                src={selectedImage}
+                alt="Gallery Image"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-fade-in"
               />
-            </div>
-            
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
-              <p className="text-lg font-medium mb-2">
-                {filteredImages[selectedImage].alt}
-              </p>
-              <p className="text-sm text-gray-400">
-                {selectedImage + 1} of {filteredImages.length}
-              </p>
+              <button
+                onClick={closeLightbox}
+                className="absolute -top-12 right-0 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-300"
+              >
+                <X size={24} />
+              </button>
             </div>
           </div>
         )}

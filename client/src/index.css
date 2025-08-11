@@ -76,6 +76,40 @@ body {
   }
 }
 
+/* Enhanced Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Custom Swiper Styles */
+.swiper-pagination-bullet-custom {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active-custom {
+  background: linear-gradient(135deg, var(--primary-gold), var(--primary-orange));
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Parallax Effect */
+.parallax-bg {
+  transition: transform 0.3s ease-out;
+}
+
 @keyframes slideInRight {
   from {
     opacity: 0;

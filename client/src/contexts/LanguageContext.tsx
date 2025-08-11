@@ -193,6 +193,12 @@ const translations = {
     
     // Gallery
     'gallery.title': 'Gallery',
+    'gallery.filter.all': 'All',
+    'gallery.filter.interior': 'Interior',
+    'gallery.filter.rooftop': 'Rooftop Views',
+    'gallery.filter.cuisine': 'Cuisine',
+    'gallery.filter.events': 'Events',
+    'gallery.subtitle': 'Discover the beauty and elegance of V Lounge through our visual journey',
     
     // Contact
     'contact.title': 'Contact & Reservations',
@@ -210,6 +216,34 @@ const translations = {
     'contact.hours': 'Opening Hours',
     'contact.daily': 'Tuesday - Sunday: 6:00 PM - 2:00 AM',
     'contact.closed': 'Closed Mondays',
+
+    // Slider
+    'home.slider.events.title': 'Exclusive Events',
+    'home.slider.events.subtitle': 'Dance the night away with our premium DJ events and special parties',
+    'home.slider.events.cta': 'Discover Events',
+    'home.slider.gallery.title': 'Breathtaking Views',
+    'home.slider.gallery.subtitle': 'Experience stunning city panoramas from our rooftop terrace',
+    'home.slider.gallery.cta': 'Explore Gallery',
+    'home.slider.menu.title': 'Exquisite Cuisine',
+    'home.slider.menu.subtitle': 'Indulge in our chef\'s selection of premium dishes and signature cocktails',
+    'home.slider.menu.cta': 'View Menu',
+
+    // Interactive Blocks
+    'home.blocks.header.tagline': 'Discover Excellence',
+    'home.blocks.header.title': 'Experience V Lounge',
+    'home.blocks.header.subtitle': 'Three exceptional experiences await you at the heart of Pétion-Ville',
+    'home.blocks.menu.title': 'Culinary Excellence',
+    'home.blocks.menu.subtitle': 'GOURMET DINING',
+    'home.blocks.menu.description': 'From succulent griot to fresh seafood, our menu celebrates both international cuisine and authentic Haitian flavors.',
+    'home.blocks.events.title': 'Premium Events',
+    'home.blocks.events.subtitle': 'ENTERTAINMENT',
+    'home.blocks.events.description': 'Join our exclusive parties with top DJs, live music, and unforgettable nights under the stars.',
+    'home.blocks.gallery.title': 'Stunning Views',
+    'home.blocks.gallery.subtitle': 'ROOFTOP EXPERIENCE',
+    'home.blocks.gallery.description': 'Panoramic views of Pétion-Ville create the perfect backdrop for your dining and entertainment experience.',
+    'home.blocks.cta': 'Explore More',
+    'home.blocks.bottom.text': 'Ready to experience luxury dining and entertainment?',
+    'home.blocks.bottom.cta': 'Make a Reservation',
   },
   fr: {
     // Navigation
@@ -252,6 +286,12 @@ const translations = {
     
     // Gallery
     'gallery.title': 'Galerie',
+    'gallery.filter.all': 'Tous',
+    'gallery.filter.interior': 'Intérieur',
+    'gallery.filter.rooftop': 'Vues Rooftop',
+    'gallery.filter.cuisine': 'Cuisine',
+    'gallery.filter.events': 'Événements',
+    'gallery.subtitle': 'Découvrez la beauté et l\'élégance de V Lounge à travers notre voyage visuel',
     
     // Contact
     'contact.title': 'Contact & Réservations',
@@ -269,6 +309,34 @@ const translations = {
     'contact.hours': 'Heures d\'Ouverture',
     'contact.daily': 'Mardi - Dimanche: 18h00 - 02h00',
     'contact.closed': 'Fermé le Lundi',
+
+    // Slider
+    'home.slider.events.title': 'Événements Exclusifs',
+    'home.slider.events.subtitle': 'Dansez toute la nuit avec nos événements DJ premium et fêtes spéciales',
+    'home.slider.events.cta': 'Découvrir les Événements',
+    'home.slider.gallery.title': 'Vues Époustouflantes',
+    'home.slider.gallery.subtitle': 'Découvrez des panoramas urbains magnifiques depuis notre terrasse sur le toit',
+    'home.slider.gallery.cta': 'Explorer la Galerie',
+    'home.slider.menu.title': 'Cuisine Exquise',
+    'home.slider.menu.subtitle': 'Savourez la sélection de notre chef avec des plats premium et cocktails signature',
+    'home.slider.menu.cta': 'Voir le Menu',
+
+    // Interactive Blocks
+    'home.blocks.header.tagline': 'Découvrez l\'Excellence',
+    'home.blocks.header.title': 'Expérience V Lounge',
+    'home.blocks.header.subtitle': 'Trois expériences exceptionnelles vous attendent au cœur de Pétion-Ville',
+    'home.blocks.menu.title': 'Excellence Culinaire',
+    'home.blocks.menu.subtitle': 'CUISINE GOURMET',
+    'home.blocks.menu.description': 'Du griot succulent aux fruits de mer frais, notre menu célèbre la cuisine internationale et les saveurs authentiques haïtiennes.',
+    'home.blocks.events.title': 'Événements Premium',
+    'home.blocks.events.subtitle': 'DIVERTISSEMENT',
+    'home.blocks.events.description': 'Rejoignez nos fêtes exclusives avec des DJs renommés, de la musique live et des nuits inoubliables sous les étoiles.',
+    'home.blocks.gallery.title': 'Vues Magnifiques',
+    'home.blocks.gallery.subtitle': 'EXPÉRIENCE ROOFTOP',
+    'home.blocks.gallery.description': 'Les vues panoramiques de Pétion-Ville créent le décor parfait pour votre expérience culinaire et de divertissement.',
+    'home.blocks.cta': 'Explorer Plus',
+    'home.blocks.bottom.text': 'Prêt à vivre une expérience de luxe culinaire et de divertissement?',
+    'home.blocks.bottom.cta': 'Faire une Réservation',
   },
   ht: {
     // Navigation
@@ -311,6 +379,12 @@ const translations = {
     
     // Gallery
     'gallery.title': 'Galri',
+    'gallery.filter.all': 'Tout',
+    'gallery.filter.interior': 'Nan kay',
+    'gallery.filter.rooftop': 'Vi sou tèt kay',
+    'gallery.filter.cuisine': 'Manje',
+    'gallery.filter.events': 'Aktivité',
+    'gallery.subtitle': 'Dekouvri bèlte ak rafinman V Lounge nan vwayaj vizyèl nou an',
     
     // Contact
     'contact.title': 'Kontak ak Rezèvasyon',
@@ -328,6 +402,34 @@ const translations = {
     'contact.hours': 'Lè Ouvè',
     'contact.daily': 'Madi - Dimanch: 6:00 PM - 2:00 AM',
     'contact.closed': 'Fèmen Lendi',
+
+    // Slider
+    'home.slider.events.title': 'Aktivité Espesyal yo',
+    'home.slider.events.subtitle': 'Vin danse tout nwit lan ak aktivité DJ kalite ak fèt espesyal nou yo',
+    'home.slider.events.cta': 'Dekouvri Aktivité yo',
+    'home.slider.gallery.title': 'Bèl Vi yo',
+    'home.slider.gallery.subtitle': 'Jwi bèl vi vil la nan tèt kay nou an',
+    'home.slider.gallery.cta': 'Gade Galri a',
+    'home.slider.menu.title': 'Manje Egzèllan',
+    'home.slider.menu.subtitle': 'Goute chwazi chef nou an ak manje kalite ak cocktail sinatè',
+    'home.slider.menu.cta': 'Gade Meni an',
+
+    // Interactive Blocks
+    'home.blocks.header.tagline': 'Dekouvri Egzèlans',
+    'home.blocks.header.title': 'Ekspèyans V Lounge',
+    'home.blocks.header.subtitle': 'Twa ekspèyans eksèpsyonèl k ap tann ou nan kè Pétion-Ville',
+    'home.blocks.menu.title': 'Egzèlans nan Manje',
+    'home.blocks.menu.subtitle': 'MANJE GOURMET',
+    'home.blocks.menu.description': 'Depi griot ki gou bon nan fwi lanmè fre yo, meni nou an selebre manje entènasyonal ak gou otantik Ayisyen yo.',
+    'home.blocks.events.title': 'Aktivité Premium',
+    'home.blocks.events.subtitle': 'DIVETISMA',
+    'home.blocks.events.description': 'Vin jwenn fèt espesyal nou yo ak DJ ki rekonèt, mizik dirèk ak nwit ou p ap janm bliye anba zetwal yo.',
+    'home.blocks.gallery.title': 'Vi Ki Bèl',
+    'home.blocks.gallery.subtitle': 'EKSPÈYANS SOU TÈT KAY',
+    'home.blocks.gallery.description': 'Vi panoramik Pétion-Ville yo kreye yon dekor pafè pou ekspèyans manje ak divetisma ou an.',
+    'home.blocks.cta': 'Eksplore Plis',
+    'home.blocks.bottom.text': 'Pare pou viv yon ekspèyans manje liks ak divetisma?',
+    'home.blocks.bottom.cta': 'Fè Rezèvasyon',
   },
 };
 
@@ -345,7 +447,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
+    return (translations[language] as any)[key] || key;
   };
 
   return (
