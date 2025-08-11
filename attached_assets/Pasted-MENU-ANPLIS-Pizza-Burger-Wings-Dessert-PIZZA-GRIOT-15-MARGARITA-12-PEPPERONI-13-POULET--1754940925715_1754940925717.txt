@@ -1,0 +1,351 @@
+MENU ANPLIS: Pizza, Burger, Wings, Dessert
+
+PIZZA
+
+GRIOT: 15
+
+MARGARITA: 12
+
+PEPPERONI: 13
+
+POULET: 15
+
+V PIZZA: 16
+
+DESSERT
+
+BROWNIES À LA MODE: 7
+
+FRIED OREO: 7
+
+ICE CREAM: 8
+
+With potatoes chips
+
+BURGER
+
+V BURGER: 15
+
+WINGS
+
+6 WINGS: 8
+
+12 WINGS: 15
+
+30 WINGS: 30
+
+50 WINGS: 50
+
+SPECIAL WINGS
+
+12 WINGS: 15
+
+30 WINGS: 20
+
+50 WINGS: 35
+
+FRIDAY ONLY
+
+Barbecue, Buffalo, jerk, beurre citronné, parmesan poivre, honey mustard, garlic parmesan, KFC
+
+MENU BWASON: Bottles
+
+BEER / VODKA
+
+PRESTIGE: $3
+
+HEINEKEN: $4
+
+BENEDICTA: $4
+
+GUINESS: $3.6
+
+SUMMUM: $58.4
+
+STOLISHNAYA: $5/50
+
+RHUM
+
+BARBANCOURT 3*: $5/35
+
+BARBANCOURT 5*: $10/50
+
+RESERVE DU DOMAINE: $15/150
+
+ZACAPA: $18/180
+
+WHISKEY
+
+JACKS DANIEL'S: $10/100
+
+JACKS DANIEL'S TEN H: $6/60
+
+DEWARS WHITE LABEL: $4/40
+
+DIMPLE PUNCH: $12/120
+
+JOHNNIE W BLACK LABEL: $8/80
+
+JOHNNIE W BLUE LABEL: $30/100
+
+CHIVAS REGAL 16 ANS: $20/200
+
+GLENFIDDICH 12 ANS: $13/130
+
+GLENFIDDICH 15 ANS: $15/150
+
+COGNAC
+
+HENESSY VS: $13/130
+
+HENESSY VSOP: $20/200
+
+REMY MARTIN VSOP: $20/200
+
+REMY MARTIN XO: $40/400
+
+TEQUILA / GIN
+
+ONE WITH LIFE: $13/130
+
+MAESTRO DOBEL SILVER: $15/159
+
+PATRON SILVER: $9/90
+
+DON JULIO ANEJO: $20/200
+
+CASAMIGOS REPOSADO: $15/150
+
+CASA NOBLE: $15/150
+
+MI CAMPO: $15/150
+
+JOSE CUERVO: $7/80
+
+GIN GORDON'S: $6/60
+
+TANQUERAY: $6/60/80
+
+BOMBAY SAPHIR: $6/60
+
+BULLDOG: $8/70
+
+HENDRICK'S: $10/85
+
+WINE / CHAMPAGNE
+
+LA FINCA: $50
+
+WOODBRIDGE: $9/90
+
+MOUTON CADET: $165
+
+MOET ET CHARDON ROSÉ: $150
+
+MOET ET CHARDON IMP: $50
+
+OREE DES ROSES: $50
+
+AMOUR DE PARIS: $30
+
+DACCI CUVÉE: $30
+
+10% TCA & 10% SERVICE CHARGE NON INCLUS
+
+MENU BWASON: Drinks
+
+JUS NATUREL: 5
+
+Grenadia, Citron, Ananas, Melon, Mangue
+
+PERRIER: 3/5
+
+ESPRESSO / MENTHE: 3
+
+SODA: 3.5
+
+Coca, Cola, Sprite, Club soda, Ginger Ale, Tonic
+
+BOUTEILLE D'EAU: 2
+
+AMARETTO SOUR: 10
+
+Amaretto, Citron, Sirop de Sucre
+BLUE KAMIKAZ: 10
+
+Citron, ananas, blue curaçao
+CHILL IT: 12
+
+Ananas, Tequila, Gin, citron, sucre, Cramberry juice
+DRY MARTINI: 10
+
+Vodka, Vermouth blanc, olive
+EXPRESSO MARTINI: 12
+
+Vodka, liqueur de café, expresso
+GINGER BREEZE: 12
+
+Vodka, citron, sucre, gingembre, Ananas
+GIN BASIL: 10
+
+Gin, Basilique, sirop de sucre, citron
+MARABOU: 10
+
+Bailey's, coffee liqueur, Amaretto
+MARGARITA: 10
+
+Tequila, triple sec, citron
+MOJITO: 10
+
+citron, menthe, Rhum blanc
+PARADISE: 11
+
+Vodka, blue curaçao, ananas, grenadine,citron
+PASSIONATE MARGARITA: 12
+
+Grenadia, Tequila, triple sec, citron
+PASSIONATE MOJITO: 12
+
+Grenadia, citron, menthe, Rhum blanc
+
+PASSIONATE VICE: 12
+
+Grenadia,vodka,citron,sucre,bitters
+PERFECT PIMMS: 11
+
+Gin,jus d'orange,citron,jus de melon,menthe,soda
+PIÑA COLADA: 10
+
+Ananas, Crème de coco, rhum blanc
+PINEAPPLE MARTINI: 12
+
+Vodka, ananas, citron
+RHUM SOUR: 10
+
+Rhum, citron, sirop de sucre, triple sec
+SEÑORITA: 11
+
+Tequila, triple sec,citron,sirop de fraise
+TEQUILA SUNRISE: 11
+
+Tequila, jus d'orange,sirop de grenadine
+TUTTI FRUTTI: 10
+
+Vodka, ananas, amaretto,citron, soda
+V PUNCH: 10
+
+Mango,Ananas,rhum,jus d'orange
+WISKY SOUR: 10
+
+Wisky, sirop de sucre, citron, triple sec
+VINS(VERRE)
+
+ROUGE: 9
+
+MOUSSEUX: 8
+
+BLANC: 8
+
+ROSÉ: 8
+
+MENU MANJE: Main Dish
+
+APPETIZERS
+
+ACRA: 6
+
+BANG BANG SHRIMP: 8
+
+BROCHETTE DE POULET: 8
+
+COQUES PLANTAIN: 8
+
+GRIOT: 7
+
+CHICKEN: 7
+
+SHRIMP: 9
+
+JUICY GRILLED SHRIMP: 9
+
+V-EMPANADAS: 8
+
+SALADES
+
+CESAR: 16
+
+TUNA TARTARE: 17
+
+V LOUNGE: 15
+
+PÂTES
+
+FETTUCCINI: 14
+
+POULET: 7
+
+SHRIMP: 10
+
+Sauce bolognaise / sauce alfredo
+
+SIDES
+
+BANANES PESÉES: 5
+
+FRITES: 6
+
+LÉGUMES SAUTÉS: 6
+
+RIZ COLLÉ: 5
+
+RIZ PERSILLÉ: 5
+
+MEATS
+
+BEEF FILET: 25
+
+Filet, jus de veau aux champignons, légumes sautés ou grillé
+
+GRILLED GOAT: 20
+
+Cabritt grillé, sauce timalice, riz collé, bananes pesées
+
+GRILLED CHICKEN: 15
+
+Poulet grillé, bananes pesées, salades
+
+PORK: 22
+
+Griot mariné, sauce timalice, bananes pesées
+
+STEAK: 25
+
+Surf and turf, sauce hollandaise ou au poivre purée pomme de terre
+
+SEAFOOD
+
+FISH 3/4 LB: 25
+
+FISH 1 LB: 35
+
+Poisson grillé ou en sauce, bananes pesées
+
+FISH FILET: 20
+
+Filet poisson au beurre rosmary, légumes sautée
+
+GRILLED OCTOPUS: 18
+
+Poulpe grillé, bananes pesées ou frites, sauce timalice
+
+HOMARD: 30
+
+queue d'homard grillé, purée pomme de terre
+
+SALMON: 30
+
+Salmon grillé au miel, purée pomme de terre, légumes sautés
+
+SHRIMP: 25
+
+Écrevisses au beurre d'ail ou à la crème, bananes pesées
