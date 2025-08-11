@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 type Language = 'en' | 'fr' | 'ht';
 
@@ -8,7 +8,51 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+// Event data with multilingual support
+export const eventData = {
+  en: {
+    title: 'EAT DRINK DANCE - BRUNCH PARTY',
+    date: 'Sunday, August 24, 2025',
+    time: 'Starts at 12:00 PM',
+    djs: 'DJ Nos, Static, and opening set by Blade',
+    tickets: {
+      earlyBird: { price: '$15.00', available: true },
+      free: { price: 'FREE', available: false, soldOut: true }
+    },
+    buyTickets: 'Buy Tickets',
+    soldOut: 'Sold Out',
+    description: 'Join us for an unforgettable brunch party experience with amazing music, delicious food, and breathtaking rooftop views.',
+    moreEvents: 'More events will be posted as they become available.'
+  },
+  fr: {
+    title: 'EAT DRINK DANCE - BRUNCH PARTY',
+    date: 'Dimanche 24 Août 2025',
+    time: 'Commence à 12:00 PM',
+    djs: 'DJ Nos, Static, et ouverture par Blade',
+    tickets: {
+      earlyBird: { price: '$15.00', available: true },
+      free: { price: 'GRATUIT', available: false, soldOut: true }
+    },
+    buyTickets: 'Acheter des Billets',
+    soldOut: 'Complet',
+    description: 'Rejoignez-nous pour une expérience brunch inoubliable avec une musique incroyable, une cuisine délicieuse et des vues époustouflantes sur le toit.',
+    moreEvents: 'Plus d\'événements seront publiés dès qu\'ils seront disponibles.'
+  },
+  ht: {
+    title: 'EAT DRINK DANCE - BRUNCH PARTY',
+    date: 'Dimanch 24 Dawout 2025',
+    time: 'Kòmanse a 12:00 PM',
+    djs: 'DJ Nos, Static, ak premye pati a ak Blade',
+    tickets: {
+      earlyBird: { price: '$15.00', available: true },
+      free: { price: 'GRATIS', available: false, soldOut: true }
+    },
+    buyTickets: 'Achte Tikè',
+    soldOut: 'Vann Nèt',
+    description: 'Vin jwenn nou pou yon ekspèyans brunch inoubliab ak mizik gwo kalite, manje ki bon anpil, ak yon bèl vi sou tèt kay la.',
+    moreEvents: 'Y ap gen plis evènman yo lè yo disponib.'
+  }
+};
 
 const translations = {
   en: {
@@ -21,8 +65,8 @@ const translations = {
     
     // Homepage
     'home.hero.title': 'Experience Luxury Above the City',
-    'home.hero.subtitle': 'V Lounge & Rooftop - Where sophistication meets the skyline of Pétion-Ville',
-    'home.hero.reserve': 'Make Reservation',
+    'home.hero.subtitle': 'V Lounge & Rooftop - Where sophistication meets the Pétion-Ville skyline',
+    'home.hero.reserve': 'Reserve a Table',
     'home.hero.tickets': 'Buy Event Tickets',
     'home.about.title': 'Elevated Dining Experience',
     'home.about.text': 'Located in the heart of Pétion-Ville, V Lounge & Rooftop offers an unparalleled dining and entertainment experience with breathtaking city views, exquisite cuisine, and sophisticated ambiance.',
@@ -138,6 +182,34 @@ const translations = {
     'menu.descriptions.mojito': 'Lemon, mint, white rum',
     'menu.descriptions.pinaColada': 'Pineapple, coconut cream, white rum',
     'menu.descriptions.vPunch': 'Mango, pineapple, rum, orange juice',
+
+    // Events
+    'events.title': 'Upcoming Events',
+    'events.buy': 'Buy Tickets',
+    'events.more': 'Learn More',
+    'events.section.title': 'Upcoming Events',
+    'events.section.subtitle': 'Don\'t miss our exclusive events',
+    'events.viewAll': 'View All Events',
+    
+    // Gallery
+    'gallery.title': 'Gallery',
+    
+    // Contact
+    'contact.title': 'Contact & Reservations',
+    'contact.reserve': 'Make a Reservation',
+    'contact.name': 'Full Name',
+    'contact.email': 'Email Address',
+    'contact.phone': 'Phone Number',
+    'contact.date': 'Reservation Date',
+    'contact.time': 'Preferred Time',
+    'contact.guests': 'Number of Guests',
+    'contact.message': 'Special Requests',
+    'contact.submit': 'Submit Reservation',
+    'contact.info': 'Contact Information',
+    'contact.address': 'Pétion-Ville, Haiti',
+    'contact.hours': 'Opening Hours',
+    'contact.daily': 'Tuesday - Sunday: 6:00 PM - 2:00 AM',
+    'contact.closed': 'Closed Mondays',
   },
   fr: {
     // Navigation
@@ -169,35 +241,14 @@ const translations = {
     'menu.desserts': 'Desserts',
     'menu.serviceNote': '10% TCA & 10% FRAIS DE SERVICE NON INCLUS',
     'menu.fridayOnly': 'Vendredi Seulement',
-    
-    // Menu Items FR
-    'menu.items.acra': 'Acra',
-    'menu.items.bangBangShrimp': 'Bang Bang Crevettes',
-    'menu.items.chickenSkewer': 'Brochette de Poulet',
-    'menu.items.plantainCups': 'Coques Plantain',
-    'menu.items.griot': 'Griot',
-    'menu.items.chicken': 'Poulet',
-    'menu.items.shrimp': 'Crevettes',
-    'menu.items.grilledShrimp': 'Crevettes Grillées Juteuses',
-    'menu.items.empanadas': 'V-Empanadas',
-    'menu.items.beefFilet': 'Filet de Bœuf',
-    'menu.items.grilledGoat': 'Cabrit Grillé',
-    'menu.items.grilledChicken': 'Poulet Grillé',
-    'menu.items.pork': 'Porc',
-    'menu.items.steak': 'Steak',
-    'menu.items.vBurger': 'V Burger',
-    'menu.items.wings6': '6 Ailes',
-    'menu.items.wings12': '12 Ailes',
-    'menu.items.wings30': '30 Ailes',
-    'menu.items.wings50': '50 Ailes',
-    'menu.items.brownies': 'Brownies à la Mode',
-    'menu.items.friedOreo': 'Oreo Frit',
-    'menu.items.iceCream': 'Crème Glacée',
-    
+
     // Events
     'events.title': 'Événements à Venir',
     'events.buy': 'Acheter des Billets',
     'events.more': 'En Savoir Plus',
+    'events.section.title': 'Événements à Venir',
+    'events.section.subtitle': 'Ne manquez pas nos événements exclusifs',
+    'events.viewAll': 'Voir Tous les Événements',
     
     // Gallery
     'gallery.title': 'Galerie',
@@ -249,35 +300,14 @@ const translations = {
     'menu.desserts': 'Dezè',
     'menu.serviceNote': '10% TCA & 10% FRAIS SERVICE PA ENKLI',
     'menu.fridayOnly': 'Vendèdi Sèlman',
-    
-    // Menu Items HT
-    'menu.items.acra': 'Akra',
-    'menu.items.bangBangShrimp': 'Bang Bang Kribich',
-    'menu.items.chickenSkewer': 'Bochèt Poul',
-    'menu.items.plantainCups': 'Kòk Bannann',
-    'menu.items.griot': 'Griyò',
-    'menu.items.chicken': 'Poul',
-    'menu.items.shrimp': 'Kribich',
-    'menu.items.grilledShrimp': 'Kribich Griye ki gen Gou',
-    'menu.items.empanadas': 'V-Empanadas',
-    'menu.items.beefFilet': 'File Bèf',
-    'menu.items.grilledGoat': 'Kabrit Griye',
-    'menu.items.grilledChicken': 'Poul Griye',
-    'menu.items.pork': 'Kochon',
-    'menu.items.steak': 'Stèk',
-    'menu.items.vBurger': 'V Burger',
-    'menu.items.wings6': '6 Zèl',
-    'menu.items.wings12': '12 Zèl',
-    'menu.items.wings30': '30 Zèl',
-    'menu.items.wings50': '50 Zèl',
-    'menu.items.brownies': 'Brownies ak Glas',
-    'menu.items.friedOreo': 'Oreo Fri',
-    'menu.items.iceCream': 'Glas',
-    
+
     // Events
     'events.title': 'Aktivite k ap Vin yo',
     'events.buy': 'Achte Tikè',
     'events.more': 'Aprann Plis',
+    'events.section.title': 'Aktivite k ap Vin yo',
+    'events.section.subtitle': 'Pa rate aktivite espesyal nou yo',
+    'events.viewAll': 'Gade Tout Aktivite yo',
     
     // Gallery
     'gallery.title': 'Galri',
@@ -298,135 +328,24 @@ const translations = {
     'contact.hours': 'Lè Ouvè',
     'contact.daily': 'Madi - Dimanch: 6:00 PM - 2:00 AM',
     'contact.closed': 'Fèmen Lendi',
-    
-    // Events
-    'events.title': 'Upcoming Events',
-    'events.buy': 'Buy Tickets',
-    'events.more': 'Learn More',
-    
-    // Gallery
-    'gallery.title': 'Gallery',
-    
-    // Contact
-    'contact.title': 'Contact & Reservations',
-    'contact.reserve': 'Make a Reservation',
-    'contact.name': 'Full Name',
-    'contact.email': 'Email Address',
-    'contact.phone': 'Phone Number',
-    'contact.date': 'Reservation Date',
-    'contact.time': 'Preferred Time',
-    'contact.guests': 'Number of Guests',
-    'contact.message': 'Special Requests',
-    'contact.submit': 'Submit Reservation',
-    'contact.info': 'Contact Information',
-    'contact.address': 'Pétion-Ville, Haiti',
-    'contact.hours': 'Opening Hours',
-    'contact.daily': 'Tuesday - Sunday: 6:00 PM - 2:00 AM',
-    'contact.closed': 'Closed Mondays',
-  },
-  fr: {
-    // Navigation
-    'nav.home': 'Accueil',
-    'nav.menu': 'Menu',
-    'nav.events': 'Événements',
-    'nav.gallery': 'Galerie',
-    'nav.contact': 'Contact',
-    
-    // Homepage
-    'home.hero.title': 'Découvrez le Luxe Au-Dessus de la Ville',
-    'home.hero.subtitle': 'V Lounge & Rooftop - Où la sophistication rencontre l\'horizon de Pétion-Ville',
-    'home.hero.reserve': 'Réserver une Table',
-    'home.hero.tickets': 'Acheter des Billets',
-    'home.about.title': 'Expérience Culinaire Élevée',
-    'home.about.text': 'Situé au cœur de Pétion-Ville, V Lounge & Rooftop offre une expérience culinaire et de divertissement incomparable avec des vues imprenables sur la ville, une cuisine exquise et une ambiance sophistiquée.',
-    
-    // Menu
-    'menu.title': 'Notre Menu',
-    'menu.appetizers': 'Entrées',
-    'menu.mains': 'Plats Principaux',
-    'menu.cocktails': 'Cocktails Signature',
-    'menu.desserts': 'Desserts',
-    
-    // Events
-    'events.title': 'Événements à Venir',
-    'events.buy': 'Acheter Billets',
-    'events.more': 'En Savoir Plus',
-    
-    // Gallery
-    'gallery.title': 'Galerie',
-    
-    // Contact
-    'contact.title': 'Contact & Réservations',
-    'contact.reserve': 'Faire une Réservation',
-    'contact.name': 'Nom Complet',
-    'contact.email': 'Adresse Email',
-    'contact.phone': 'Numéro de Téléphone',
-    'contact.date': 'Date de Réservation',
-    'contact.time': 'Heure Préférée',
-    'contact.guests': 'Nombre d\'Invités',
-    'contact.message': 'Demandes Spéciales',
-    'contact.submit': 'Soumettre Réservation',
-    'contact.info': 'Informations de Contact',
-    'contact.address': 'Pétion-Ville, Haïti',
-    'contact.hours': 'Heures d\'Ouverture',
-    'contact.daily': 'Mardi - Dimanche: 18:00 - 02:00',
-    'contact.closed': 'Fermé le Lundi',
-  },
-  ht: {
-    // Navigation
-    'nav.home': 'Akèy',
-    'nav.menu': 'Meni',
-    'nav.events': 'Aktivite',
-    'nav.gallery': 'Galri',
-    'nav.contact': 'Kontak',
-    
-    // Homepage
-    'home.hero.title': 'Viv Eksperyans Luxe Anwo Vil la',
-    'home.hero.subtitle': 'V Lounge & Rooftop - Kote sofistikasyon rankontre orizon Pétion-Ville',
-    'home.hero.reserve': 'Fè Rezèvasyon',
-    'home.hero.tickets': 'Achte Tikè',
-    'home.about.title': 'Eksperyans Manje ki Elve',
-    'home.about.text': 'Ki sitye nan kè Pétion-Ville, V Lounge & Rooftop ofri yon eksperyans manje ak amizman ki san konparezon ak bèl vi sou vil la, manje ki ekselèn, ak yon anviwonman rafine.',
-    
-    // Menu
-    'menu.title': 'Meni Nou an',
-    'menu.appetizers': 'Antrè',
-    'menu.mains': 'Mèt Manje',
-    'menu.cocktails': 'Cocktail Espesyal',
-    'menu.desserts': 'Dese',
-    
-    // Events
-    'events.title': 'Aktivite k ap Vini',
-    'events.buy': 'Achte Tikè',
-    'events.more': 'Aprann Plis',
-    
-    // Gallery
-    'gallery.title': 'Galri',
-    
-    // Contact
-    'contact.title': 'Kontak & Rezèvasyon',
-    'contact.reserve': 'Fè yon Rezèvasyon',
-    'contact.name': 'Non Konple',
-    'contact.email': 'Adrès Imèl',
-    'contact.phone': 'Nimewo Telefòn',
-    'contact.date': 'Dat Rezèvasyon',
-    'contact.time': 'Lè w Prefere',
-    'contact.guests': 'Kantite Envite',
-    'contact.message': 'Demann Espesyal',
-    'contact.submit': 'Soumèt Rezèvasyon',
-    'contact.info': 'Enfomasyon Kontak',
-    'contact.address': 'Pétion-Ville, Ayiti',
-    'contact.hours': 'Lè Ouvèti',
-    'contact.daily': 'Madi - Dimanch: 6:00 PM - 2:00 AM',
-    'contact.closed': 'Fèmen Lendi',
   },
 };
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key;
+    return translations[language][key] || key;
   };
 
   return (
@@ -434,12 +353,4 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       {children}
     </LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
 };

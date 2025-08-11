@@ -1,9 +1,15 @@
 import { Link } from 'wouter';
-import { ArrowRight, MapPin, Clock, Users, Star, Award, Heart } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { ArrowRight, MapPin, Clock, Users, Star, Award, Heart, Calendar, Music, ExternalLink } from 'lucide-react';
+import { useLanguage, eventData } from '../contexts/LanguageContext';
+import eventImage from '@assets/vlounge_rooftop_1754936167492_1754942008137.jpeg';
 
 const Home: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const currentEvent = eventData[language];
+
+  const handleBuyTickets = () => {
+    window.open('https://pamevent.com/event/eat-drink-dance-brunch-party/510', '_blank');
+  };
 
   return (
     <div>
@@ -153,8 +159,100 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Featured Gallery Preview */}
+
+      {/* Events Section */}
       <section className="py-32 bg-bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-mesh opacity-20" />
+        <div className="container-fluid relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-gradient animate-fade-in-up">
+              {t('events.section.title')}
+            </h2>
+            <p className="text-secondary text-xl font-light animate-fade-in-up delay-200 max-w-2xl mx-auto text-balance">
+              {t('events.section.subtitle')}
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto mb-16">
+            <div className="card-premium hover-lift animate-fade-in-up delay-300">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden image-overlay">
+                    <img
+                      src={eventImage}
+                      alt={currentEvent.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <Music className="text-primary-gold" size={18} />
+                        <span className="text-sm font-medium text-white">LIVE MUSIC EVENT</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+                    {currentEvent.title}
+                  </h3>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center space-x-3">
+                      <Calendar className="text-primary-gold flex-shrink-0" size={18} />
+                      <span className="text-secondary">{currentEvent.date}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Clock className="text-primary-gold flex-shrink-0" size={18} />
+                      <span className="text-secondary">{currentEvent.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Music className="text-primary-gold flex-shrink-0" size={18} />
+                      <span className="text-secondary">{currentEvent.djs}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-muted leading-relaxed mb-8">
+                    {currentEvent.description}
+                  </p>
+
+                  {/* Ticket Pricing */}
+                  <div className="flex items-center space-x-4 mb-8">
+                    <div className="bg-gradient-to-r from-primary-gold to-primary-orange px-4 py-2 rounded-lg">
+                      <span className="text-black font-semibold">EARLY BIRD: {currentEvent.tickets.earlyBird.price}</span>
+                    </div>
+                    <div className="text-secondary">
+                      <span className="text-red-400 font-medium">{currentEvent.tickets.free.price}: {currentEvent.soldOut}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button 
+                      onClick={handleBuyTickets}
+                      className="btn-primary text-lg px-8 py-4 hover:scale-105 transition-all duration-300 group"
+                    >
+                      <span className="flex items-center justify-center space-x-2">
+                        <span>{currentEvent.buyTickets}</span>
+                        <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </button>
+                    <Link 
+                      to="/events"
+                      className="btn-secondary text-lg px-8 py-4 hover:scale-105 transition-all duration-300"
+                    >
+                      {t('events.viewAll')}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Gallery Preview */}
+      <section className="py-32 bg-bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh opacity-20" />
         <div className="container-fluid relative z-10">
           <div className="text-center mb-20">
