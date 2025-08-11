@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
@@ -7,7 +7,7 @@ import LanguageSelector from './LanguageSelector';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const [location] = useLocation();
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -83,13 +83,13 @@ const Header: React.FC = () => {
                 key={path}
                 to={path}
                 className={`relative text-sm font-medium tracking-wide transition-all duration-300 hover:text-gradient group ${
-                  location.pathname === path
+                  location === path
                     ? 'text-gradient'
                     : 'text-white'
                 }`}
               >
                 {label}
-                {location.pathname === path && (
+                {location === path && (
                   <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-gold to-primary-orange rounded-full animate-shimmer" />
                 )}
                 <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-gold to-primary-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
                 to={path}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block text-lg font-medium tracking-wide transition-all duration-300 hover:text-gradient hover:translate-x-2 ${
-                  location.pathname === path
+                  location === path
                     ? 'text-gradient'
                     : 'text-white'
                 }`}

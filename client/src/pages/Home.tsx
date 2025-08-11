@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import { ArrowRight, MapPin, Clock, Users, Star, Award, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 

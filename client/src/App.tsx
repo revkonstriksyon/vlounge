@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, Switch } from 'wouter';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -12,21 +11,19 @@ import { LanguageProvider } from './contexts/LanguageContext';
 function App() {
   return (
     <LanguageProvider>
-      <Router>
-        <div className="min-h-screen bg-black text-white">
-          <Header />
-          <main className="pt-20">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/menu" element={<Menu />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <div className="min-h-screen bg-black text-white">
+        <Header />
+        <main className="pt-20">
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/menu" component={Menu} />
+            <Route path="/events" component={Events} />
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+        </main>
+        <Footer />
+      </div>
     </LanguageProvider>
   );
 }
