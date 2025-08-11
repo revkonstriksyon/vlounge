@@ -216,6 +216,12 @@ const translations = {
     'contact.hours': 'Opening Hours',
     'contact.daily': 'Tuesday - Sunday: 6:00 PM - 2:00 AM',
     'contact.closed': 'Closed Mondays',
+    'contact.subtitle': 'Book your table and experience luxury dining with breathtaking city views',
+    'contact.location.title': 'Visit Us',
+    'contact.success': 'Reservation request submitted! We will contact you shortly.',
+    
+    // Footer
+    'footer.quickLinks': 'Quick Links',
 
     // Slider
     'home.slider.events.title': 'Exclusive Events',
@@ -309,6 +315,12 @@ const translations = {
     'contact.hours': 'Heures d\'Ouverture',
     'contact.daily': 'Mardi - Dimanche: 18h00 - 02h00',
     'contact.closed': 'Fermé le Lundi',
+    'contact.subtitle': 'Réservez votre table et vivez une expérience culinaire de luxe avec une vue imprenable sur la ville',
+    'contact.location.title': 'Visitez-nous',
+    'contact.success': 'Demande de réservation soumise! Nous vous contacterons bientôt.',
+    
+    // Footer
+    'footer.quickLinks': 'Liens Rapides',
 
     // Slider
     'home.slider.events.title': 'Événements Exclusifs',
@@ -402,6 +414,12 @@ const translations = {
     'contact.hours': 'Lè Ouvè',
     'contact.daily': 'Madi - Dimanch: 6:00 PM - 2:00 AM',
     'contact.closed': 'Fèmen Lendi',
+    'contact.subtitle': 'Rezèvè tab ou a ak viv ekspèyans manje liks ak bèl vi vil la',
+    'contact.location.title': 'Vin Wè Nou',
+    'contact.success': 'Demann rezèvasyon an voye! Nou pral kontak ou yo pi vit la.',
+    
+    // Footer
+    'footer.quickLinks': 'Lyen Rapid',
 
     // Slider
     'home.slider.events.title': 'Aktivité Espesyal yo',
