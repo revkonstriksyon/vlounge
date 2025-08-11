@@ -330,6 +330,18 @@ body {
   cursor: not-allowed;
 }
 
+/* Footer Enhancement */
+footer {
+  position: relative;
+  z-index: 50;
+  min-height: 500px;
+}
+
+/* Ensure footer is always visible */
+main {
+  flex: 1;
+}
+
 /* Animation Classes */
 .animate-fade-in-up {
   animation: fadeInUp 1s ease-out forwards;

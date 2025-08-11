@@ -11,9 +11,9 @@ import { LanguageProvider } from './contexts/LanguageContext';
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white flex flex-col">
         <Header />
-        <main className="pt-20">
+        <main className="flex-1 pt-20">
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/menu" component={Menu} />

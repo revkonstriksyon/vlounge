@@ -22,17 +22,22 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-black overflow-hidden">
-      {/* Background Effects */}
+    <footer className="relative bg-gradient-to-b from-gray-900 to-black border-t border-primary-gold/20 overflow-hidden">
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-gold/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-orange/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-gold/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-orange/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,215,0,0.3) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
 
       <ParallaxSection speed={0.2}>
-        <div className="relative z-10 pt-20 pb-8">
-          <div className="container mx-auto px-4">
+        <div className="relative z-10 pt-24 pb-16">
+          <div className="container-fluid max-w-7xl mx-auto px-6">
             {/* Main Footer Content */}
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-16">
               
@@ -62,7 +67,7 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-enhanced leading-relaxed font-medium mb-6">
-                    {t('home.about.text')}
+                    Premium rooftop dining experience in the heart of Pétion-Ville with stunning city views and exceptional cuisine.
                   </p>
                   
                   {/* Social Links */}
@@ -171,14 +176,14 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/10 pt-8">
+            <div className="border-t border-primary-gold/30 pt-8 mt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <p className="text-enhanced text-sm font-medium">
+                <p className="text-bright text-base font-semibold">
                   © 2024 V Lounge & Rooftop. All rights reserved.
                 </p>
-                <div className="flex items-center space-x-2 text-enhanced text-sm font-medium">
+                <div className="flex items-center space-x-2 text-bright text-base font-medium">
                   <span>Made with</span>
-                  <Heart className="text-primary-gold fill-current animate-pulse" size={16} />
+                  <Heart className="text-primary-gold fill-current animate-pulse" size={18} />
                   <span>in Pétion-Ville</span>
                 </div>
               </div>
