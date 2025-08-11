@@ -87,18 +87,18 @@ const Gallery: React.FC = () => {
           <section className="py-20 text-center">
             <div className="container mx-auto px-4">
               <div className="inline-flex items-center space-x-2 mb-6">
-                <Camera size={24} className="text-primary-gold animate-pulse" />
-                <span className="text-primary-gold font-semibold uppercase tracking-widest text-sm">
+                <Camera size={24} className="text-accent animate-pulse" />
+                <span className="text-accent font-bold uppercase tracking-widest text-sm">
                   Visual Experience
                 </span>
-                <Camera size={24} className="text-primary-gold animate-pulse" />
+                <Camera size={24} className="text-accent animate-pulse" />
               </div>
               
               <h1 className="font-display text-5xl md:text-7xl font-bold text-gradient mb-6 animate-fade-in-up">
                 {t('gallery.title')}
               </h1>
               
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+              <p className="text-xl text-enhanced max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200 font-medium">
                 {t('gallery.subtitle')}
               </p>
             </div>
@@ -113,14 +113,14 @@ const Gallery: React.FC = () => {
                 <button
                   key={category.key}
                   onClick={() => setActiveFilter(category.key)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 ${
+                  className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 transform hover:-translate-y-1 ${
                     activeFilter === category.key
-                      ? 'bg-gradient-to-r from-primary-gold to-primary-orange text-black shadow-lg'
-                      : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+                      ? 'btn-primary shadow-2xl'
+                      : 'btn-secondary shadow-lg'
                   }`}
                 >
-                  <span className="flex items-center space-x-2">
-                    <Filter size={16} />
+                  <span className="flex items-center space-x-3">
+                    <Filter size={18} />
                     <span>{category.label}</span>
                   </span>
                 </button>
@@ -151,13 +151,13 @@ const Gallery: React.FC = () => {
                   
                   {/* Title */}
                   <div className="absolute bottom-4 left-4 right-4 transform translateY-4 group-hover:translateY-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <h3 className="text-white font-semibold text-lg leading-tight">
+                    <h3 className="text-bright font-bold text-lg leading-tight drop-shadow-lg">
                       {image.title}
                     </h3>
                   </div>
 
                   {/* Hover Effect Ring */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-primary-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse" />
+                  <div className="absolute inset-0 rounded-2xl border-3 border-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl" />
                 </div>
               ))}
             </div>

@@ -59,18 +59,18 @@ const InteractiveBlocks: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 mb-6">
-            <Sparkles size={24} className="text-primary-gold animate-pulse" />
-            <span className="text-primary-gold font-semibold uppercase tracking-widest text-sm">
+            <Sparkles size={24} className="text-accent animate-pulse" />
+            <span className="text-accent font-bold uppercase tracking-widest text-sm">
               {t('home.blocks.header.tagline')}
             </span>
-            <Sparkles size={24} className="text-primary-gold animate-pulse" />
+            <Sparkles size={24} className="text-accent animate-pulse" />
           </div>
           
           <h2 className="font-display text-4xl md:text-6xl font-bold text-gradient mb-6 animate-fade-in-up">
             {t('home.blocks.header.title')}
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-xl text-enhanced max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200 font-medium">
             {t('home.blocks.header.subtitle')}
           </p>
         </div>
@@ -107,27 +107,27 @@ const InteractiveBlocks: React.FC = () => {
                   {/* Text Content */}
                   <div className="transform transition-transform duration-300 group-hover:-translate-y-2">
                     <div className="mb-2">
-                      <span className="text-primary-gold font-semibold uppercase tracking-widest text-sm">
+                      <span className="text-accent font-bold uppercase tracking-widest text-sm">
                         {block.subtitle}
                       </span>
                     </div>
                     
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-bright mb-4 leading-tight drop-shadow-lg">
                       {block.title}
                     </h3>
                     
-                    <p className="text-gray-200 text-base leading-relaxed mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-enhanced text-base leading-relaxed mb-6 opacity-95 group-hover:opacity-100 transition-opacity duration-300 font-medium">
                       {block.description}
                     </p>
 
                     {/* CTA */}
-                    <div className="flex items-center space-x-2 text-white font-semibold">
-                      <span className="group-hover:text-primary-gold transition-colors duration-300">
+                    <div className="flex items-center space-x-2 text-bright font-bold">
+                      <span className="group-hover:text-accent transition-colors duration-300">
                         {t('home.blocks.cta')}
                       </span>
                       <ArrowRight 
                         size={20} 
-                        className="transform transition-all duration-300 group-hover:translate-x-2 group-hover:text-primary-gold" 
+                        className="transform transition-all duration-300 group-hover:translate-x-2 group-hover:text-accent" 
                       />
                     </div>
                   </div>
@@ -145,15 +145,15 @@ const InteractiveBlocks: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20 animate-fade-in-up delay-1000">
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-enhanced mb-8 font-medium">
             {t('home.blocks.bottom.text')}
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center space-x-3 bg-gradient-to-r from-primary-gold to-primary-orange text-black font-semibold px-8 py-4 rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 group"
+            className="btn-primary text-lg px-10 py-5 group"
           >
             <span>{t('home.blocks.bottom.cta')}</span>
-            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
+            <ArrowRight size={20} className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
         </div>
       </div>

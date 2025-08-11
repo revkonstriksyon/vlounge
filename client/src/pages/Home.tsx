@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-8 text-gradient animate-fade-in-up">
               {t('home.about.title')}
             </h2>
-            <p className="text-xl md:text-2xl text-secondary leading-relaxed mb-20 max-w-4xl mx-auto font-light animate-fade-in-up delay-200 text-balance">
+            <p className="text-xl md:text-2xl text-enhanced leading-relaxed mb-20 max-w-4xl mx-auto font-medium animate-fade-in-up delay-200 text-balance">
               {t('home.about.text')}
             </p>
 
@@ -38,24 +38,24 @@ const Home: React.FC = () => {
                 <div className="w-20 h-20 bg-gradient-to-r from-primary-gold to-primary-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 animate-glow">
                   <MapPin className="text-black" size={28} />
                 </div>
-                <h3 className="text-2xl font-display font-semibold mb-4 text-white group-hover:text-gradient transition-colors duration-300">Prime Location</h3>
-                <p className="text-muted leading-relaxed">Heart of Pétion-Ville with stunning city views</p>
+                <h3 className="text-2xl font-display font-semibold mb-4 text-bright group-hover:text-gradient transition-colors duration-300">Prime Location</h3>
+                <p className="text-enhanced leading-relaxed font-medium">Heart of Pétion-Ville with stunning city views</p>
               </div>
 
               <div className="card-premium text-center hover-lift animate-fade-in-up delay-400 group">
                 <div className="w-20 h-20 bg-gradient-to-r from-primary-gold to-primary-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 animate-glow">
                   <Clock className="text-black" size={28} />
                 </div>
-                <h3 className="text-2xl font-display font-semibold mb-4 text-white group-hover:text-gradient transition-colors duration-300">Perfect Hours</h3>
-                <p className="text-muted leading-relaxed">Open Tuesday-Sunday, 6PM-2AM</p>
+                <h3 className="text-2xl font-display font-semibold mb-4 text-bright group-hover:text-gradient transition-colors duration-300">Perfect Hours</h3>
+                <p className="text-enhanced leading-relaxed font-medium">Open Tuesday-Sunday, 6PM-2AM</p>
               </div>
 
               <div className="card-premium text-center hover-lift animate-fade-in-up delay-500 group">
                 <div className="w-20 h-20 bg-gradient-to-r from-primary-gold to-primary-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 animate-glow">
                   <Users className="text-black" size={28} />
                 </div>
-                <h3 className="text-2xl font-display font-semibold mb-4 text-white group-hover:text-gradient transition-colors duration-300">VIP Experience</h3>
-                <p className="text-muted leading-relaxed">Exclusive events and premium service</p>
+                <h3 className="text-2xl font-display font-semibold mb-4 text-bright group-hover:text-gradient transition-colors duration-300">VIP Experience</h3>
+                <p className="text-enhanced leading-relaxed font-medium">Exclusive events and premium service</p>
               </div>
             </div>
           </div>
@@ -68,19 +68,19 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center animate-fade-in-up delay-100">
               <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">5+</div>
-              <div className="text-muted text-sm uppercase tracking-widest">Years Excellence</div>
+              <div className="text-enhanced text-sm uppercase tracking-widest font-semibold">Years Excellence</div>
             </div>
             <div className="text-center animate-fade-in-up delay-200">
               <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">50K+</div>
-              <div className="text-muted text-sm uppercase tracking-widest">Happy Guests</div>
+              <div className="text-enhanced text-sm uppercase tracking-widest font-semibold">Happy Guests</div>
             </div>
             <div className="text-center animate-fade-in-up delay-300">
               <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">200+</div>
-              <div className="text-muted text-sm uppercase tracking-widest">Events Hosted</div>
+              <div className="text-enhanced text-sm uppercase tracking-widest font-semibold">Events Hosted</div>
             </div>
             <div className="text-center animate-fade-in-up delay-400">
               <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">4.9</div>
-              <div className="text-muted text-sm uppercase tracking-widest">Rating</div>
+              <div className="text-enhanced text-sm uppercase tracking-widest font-semibold">Rating</div>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-gradient animate-fade-in-up">
               {t('events.section.title')}
             </h2>
-            <p className="text-secondary text-xl font-light animate-fade-in-up delay-200 max-w-2xl mx-auto text-balance">
+            <p className="text-enhanced text-xl font-medium animate-fade-in-up delay-200 max-w-2xl mx-auto text-balance">
               {t('events.section.subtitle')}
             </p>
           </div>

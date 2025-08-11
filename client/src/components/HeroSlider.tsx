@@ -112,14 +112,14 @@ const HeroSlider: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h1 className={`font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white animate-fade-in-up ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                    style={{ animationDelay: `${index * 0.2 + 0.3}s` }}>
+                <h1 className={`font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-bright animate-fade-in-up drop-shadow-2xl ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    style={{ animationDelay: `${index * 0.2 + 0.3}s`, textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
                   {slide.title}
                 </h1>
 
                 {/* Subtitle */}
-                <p className={`text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                   style={{ animationDelay: `${index * 0.2 + 0.6}s` }}>
+                <p className={`text-xl md:text-2xl text-enhanced mb-12 max-w-4xl mx-auto leading-relaxed font-medium animate-fade-in-up drop-shadow-lg ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                   style={{ animationDelay: `${index * 0.2 + 0.6}s`, textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
                   {slide.subtitle}
                 </p>
 
@@ -128,7 +128,7 @@ const HeroSlider: React.FC = () => {
                      style={{ animationDelay: `${index * 0.2 + 0.9}s` }}>
                   <Link
                     to={slide.link}
-                    className="inline-flex items-center space-x-3 bg-gradient-to-r from-primary-gold to-primary-orange text-black font-semibold px-10 py-5 rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 group text-lg"
+                    className="btn-primary text-lg px-12 py-6 group shadow-2xl"
                   >
                     <span>{slide.cta}</span>
                     <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform duration-300" />
