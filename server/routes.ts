@@ -6,6 +6,7 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 import { storage } from "./storage";
+import { synchronizeExistingContent } from "./contentSynchronizer";
 import { 
   insertUserSchema,
   insertSliderItemSchema,
@@ -524,6 +525,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(contact);
     } catch (error) {
       res.status(500).json({ message: "Failed to update contact info" });
+    }
+  });
+
+  // ======================
+  // CONTENT SYNCHRONIZATION
+  // ======================
+  
+  app.post("/api/admin/sync-content", requireAuth, async (req, res) => {
+    try {
+      const result = await synchronizeExistingContent(storage);
+      
+      if (result.success) {
+        res.json({ message: result.message });
+      } else {
+        res.status(500).json({ message: result.message, error: result.error });
+      }
+    } catch (error) {
+      res.status(500).json({ message: "Failed to synchronize content" });
     }
   });
 

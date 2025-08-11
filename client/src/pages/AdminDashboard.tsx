@@ -16,7 +16,8 @@ import {
   Plus,
   Edit,
   Trash2,
-  Users
+  Users,
+  Download
 } from "lucide-react";
 
 // Import admin components
@@ -54,6 +55,33 @@ export default function AdminDashboard() {
         description: "You have been signed out of the admin panel",
       });
       setLocation("/admin/login");
+    },
+  });
+
+  // Content synchronization mutation
+  const syncMutation = useMutation({
+    mutationFn: async () => {
+      const response = await fetch("/api/admin/sync-content", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Success",
+        description: "All existing content has been imported successfully",
+      });
+      queryClient.invalidateQueries();
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Error",
+        description: `Failed to sync content: ${error.message}`,
+        variant: "destructive",
+      });
     },
   });
 
@@ -186,6 +214,30 @@ export default function AdminDashboard() {
               </Card>
             </div>
 
+            {/* Content Synchronization Section */}
+            <Card className="bg-black/40 border-orange-500/30 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg font-medium text-white flex items-center">
+                  <Download className="h-5 w-5 mr-2 text-orange-500" />
+                  Import Existing Content
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-gray-400 text-sm">
+                  Import all existing website content (menu items, gallery images, slider content, and events) 
+                  into the CMS for immediate editing. This will populate the admin interface with all current data.
+                </p>
+                <Button
+                  onClick={() => syncMutation.mutate()}
+                  disabled={syncMutation.isPending}
+                  className="bg-orange-500 hover:bg-orange-600 text-white"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  {syncMutation.isPending ? "Importing..." : "Import Existing Content"}
+                </Button>
+              </CardContent>
+            </Card>
+
             <Card className="bg-black/40 border-orange-500/30 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-white">Quick Actions</CardTitle>
@@ -193,28 +245,28 @@ export default function AdminDashboard() {
               <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <Button 
                   className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-black font-semibold"
-                  onClick={() => document.querySelector('[data-value="slider"]')?.click()}
+                  onClick={() => (document.querySelector('[data-value="slider"]') as HTMLElement)?.click()}
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Slide
                 </Button>
                 <Button 
                   className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-black font-semibold"
-                  onClick={() => document.querySelector('[data-value="menu"]')?.click()}
+                  onClick={() => (document.querySelector('[data-value="menu"]') as HTMLElement)?.click()}
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Menu Item
                 </Button>
                 <Button 
                   className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-black font-semibold"
-                  onClick={() => document.querySelector('[data-value="events"]')?.click()}
+                  onClick={() => (document.querySelector('[data-value="events"]') as HTMLElement)?.click()}
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Event
                 </Button>
                 <Button 
                   className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-black font-semibold"
-                  onClick={() => document.querySelector('[data-value="gallery"]')?.click()}
+                  onClick={() => (document.querySelector('[data-value="gallery"]') as HTMLElement)?.click()}
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Image
