@@ -11,12 +11,14 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { queryClient } from './lib/queryClient';
+import ToastContainer from './components/ToastContainer';
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <div className="min-h-screen bg-black text-white flex flex-col">
+          <ToastContainer />
           <Switch>
             {/* Admin routes */}
             <Route path="/admin/login" component={AdminLogin} />

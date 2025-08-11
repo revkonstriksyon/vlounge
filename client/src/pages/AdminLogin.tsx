@@ -6,7 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { Lock, User } from "lucide-react";
@@ -84,7 +84,6 @@ export default function AdminLogin() {
         </CardHeader>
         
         <CardContent>
-          <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
@@ -140,7 +139,6 @@ export default function AdminLogin() {
                 {loginMutation.isPending ? "Signing in..." : "Sign In"}
               </Button>
             </form>
-          </Form>
           
           <div className="mt-6 text-center text-sm text-gray-500">
             <p>Default credentials:</p>

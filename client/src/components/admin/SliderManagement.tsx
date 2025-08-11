@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
@@ -203,7 +203,6 @@ export default function SliderManagement() {
               <DialogTitle>{editingItem ? "Edit" : "Add"} Slider Item</DialogTitle>
             </DialogHeader>
             
-            <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Upload Image</label>
@@ -362,7 +361,6 @@ export default function SliderManagement() {
                   </Button>
                 </div>
               </form>
-            </Form>
           </DialogContent>
         </Dialog>
       </div>
